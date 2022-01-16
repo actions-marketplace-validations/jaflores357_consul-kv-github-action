@@ -1,5 +1,5 @@
 # action.yml
-name: "Consul KV"
+name: "Consul KV with path"
 author: "Jorge Flores"
 description: "A Github Action that sets environment variables based on Consul KV"
 branding:
