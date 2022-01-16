@@ -1,0 +1,25 @@
+# action.yml
+name: "Consul KV"
+author: "Jorge Flores"
+description: "A Github Action that sets environment variables based on Consul KV"
+branding:
+  icon: "database"
+  color: "red"
+inputs:
+  url:
+    description: "The URL for Consul"
+    required: true
+  key:
+    description: "The key you want the value of in Consul KV"
+    required: true
+  name:
+    description: "The name of environment var to the value"
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.url }}
+    - ${{ inputs.key }}
+    - ${{ inputs.name }}
